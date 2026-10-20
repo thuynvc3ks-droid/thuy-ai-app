@@ -7,7 +7,7 @@ api_key = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 # Khởi tạo mô hình
-model = genai.GenerativeModel('gemini-1.5-flash') # Hoặc mô hình thầy đã dùng
+model = ggenai.GenerativeModel('gemini-pro') # Hoặc mô hình thầy đã dùng
 
 # 2. Tạo giao diện Web
 st.title("Trợ lý AI của Thầy Thủy")
