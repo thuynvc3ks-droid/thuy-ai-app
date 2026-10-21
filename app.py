@@ -9,7 +9,7 @@ if not api_key:
     st.error("Lỗi: Chưa tìm thấy API Key trong mục Secrets.")
 else:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
     
     user_input = st.text_input("Nhập câu hỏi của bạn:")
     
