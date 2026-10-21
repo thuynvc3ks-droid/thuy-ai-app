@@ -6,10 +6,11 @@ st.title("Trợ lý AI của Thầy Thủy")
 api_key = os.environ.get("GEMINI_API_KEY")
 
 if not api_key:
-    st.error("Lỗi: Chưa tìm thấy API Key trong mục Secrets.")
+    st.error("Lỗi: Chưa tìm thấy API Key.")
 else:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    # Chốt sử dụng mô hình gemini-pro ổn định nhất trên mọi phiên bản
+    model = genai.GenerativeModel('gemini-pro')
     
     user_input = st.text_input("Nhập câu hỏi của bạn:")
     
